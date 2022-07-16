@@ -35,6 +35,7 @@
 #define INT2_MASK	0xA1	/* setting bits in this port disables ints */
 #define ENABLE          0x20	/* code used to re-enable after an interrupt */
 #endif
+#define NR_REGS           11	/* number of general regs in each proc slot */
 
 #define TASK_STACK_BYTES 256	/* how many bytes for each task stack */
 #define K_STACK_BYTES    256	/* how many bytes for the kernel stack */

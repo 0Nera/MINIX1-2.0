@@ -4,7 +4,11 @@
  * It contains the process' registers, memory map, accounting, and message
  * send/receive information.
  */
-
+struct pc_psw {
+  int (*pc)();			/* storage for program counter */
+  phys_clicks cs;		/* code segment register */
+  unsigned psw;			/* program status word */
+};
 EXTERN struct proc {
   int p_reg[NR_REGS];		/* process' registers */
   int *p_sp;			/* stack pointer */
